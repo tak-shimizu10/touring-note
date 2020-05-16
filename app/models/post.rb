@@ -1,8 +1,7 @@
 class Post < ApplicationRecord
-  validates :tag, :title, :text, :image, presence: true
+  validates :tag_id, :title, :text, :image, presence: true
   belongs_to :user
-  has_many :post_tags, dependent: :destroy
-  has_many :tags, through: :post_tags
+  belongs_to :tag
 
   mount_uploader :image, ImageUploader
 end
