@@ -1,0 +1,64 @@
+<%= render 'layouts/top_header' %>
+
+<div class="main">
+  <div class="top_page">
+    <h2 class="main_content__title">- Focus -</h2>
+    <h3 class="main_content__explanation">注目の投稿</h3>
+    <div class="main_content">
+      <div class="top_nice__left-box">
+        <img src="https://cdn.jalan.jp/jalan/img/2/kuchikomi/1002/KXL/852fd_0001002701_1.jpg" class="top_nice__photo">
+      </div>
+      <div class="top_nice__right-box">
+        <div class="text_box">
+          <span class="new_mark">New</span>
+          <a class="category" href="">風景</a>
+          <div class="top_nice__user_post">
+            <h2 class="top_nice__title">山口県 角島大橋</h2>
+            <h3 class="top_nice__comment">角島大橋の爽快さとその絶景は何度でも来たくなります。マリンブルーの海が両サイドに広がる角島大橋は全長1780mの無料の橋です。完成当初は日本一長い無料の橋だったそうで、その走りごたえは抜群です。</h3>
+          </div>
+        </div>
+        <div class="info_box">
+          <div class="access_box">
+          </div>
+          <a class="top_nice__user_icon" href="">
+            <img src="https://www.lotascard.jp/managed/wp-content/uploads/2019/05/f6c87a7852f3c991c3d618b291f74257-700x564.jpg" class="user_thumbnail">
+          </a>
+          <div class="detail_box">
+            <a class="post_date" href="">2020月4月6日</a>
+            <a class="top_nice__user_name" href="">TAKAFUMI SHIMIZU</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="reccomend_shop_content__title">- Reccomend -</h2>
+    <h3 class="reccomend_shop_content__explanation">旅先でのおすすめをご紹介</h3>
+    <div class="reccomend_shop_content">
+      <div class="shop_box">
+      </div>
+    </div>
+    <h2 class="new_arrival_content__title">- New arrival -</h2>
+    <h3 class="new_arrival_content__explanation">最新の投稿</h3>
+    <div class="new_arrival_content">
+      <% @posts.each do |post| %>
+        <div class="post_box">
+          <a><%= post.image %></a>
+          <p><%= post.title %></p>
+        </div>
+      <% end %>
+      <% @posts.each do |post| %>
+        <div class="post_box">
+          <a><%= post.image %></a>
+          <p><%= post.title %></p>
+        </div>
+      <% end %>
+      <% @posts.each do |post| %>
+        <div class="post_box">
+          <a><%= post.image %></a>
+          <p><%= post.title %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/top_footer' %>

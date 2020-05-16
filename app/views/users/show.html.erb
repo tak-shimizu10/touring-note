@@ -1,0 +1,19 @@
+<%= render 'layouts/header' %>
+
+<div class="contents row">
+  <p><%= @nickname %> のページ</p>
+  <% @posts.each do |post| %>
+    <div class="content_post">
+      <div class="new_image_box" style="background-image: url(<%= post.image %>);">
+      </div>
+      <span class="name">
+        <%= post.title %>
+      </span>
+      <div class="new_text_box">
+        <%= post.text %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'layouts/footer' %>

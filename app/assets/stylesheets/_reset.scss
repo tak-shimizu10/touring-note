@@ -1,0 +1,241 @@
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html{
+	color:#000;
+	background:#FFF;
+}
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+
+
+//mixin
+
+// @mixin boxBase($margin: 30px auto, $padding: 10px) {
+//   margin: $margin;
+//   padding: $padding;
+// }
+// @mixin basePadding($padding: 10px) {
+//   padding: $padding;
+// }
+// @mixin baseMargin($margin: 10px auto) {
+//   margin: $margin;
+// }
+
+
+
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin:0;
+  padding:0;
+  font-family: europa, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "Noto Sans JP", "Hiragino Sans", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", YuGothic, YuGothicM, メイリオ, Meiryo, sans-serif;;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,
+img {
+	border:0;
+}
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+ol,
+ul {
+	list-style:none;
+}
+
+caption,
+th {
+	text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,
+q:after {
+	content:'';
+}
+abbr,
+acronym {
+	border:0;
+	font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+	*font-size:100%; /*to enable resizing for IE*/
+}
+/*because legend doesn't inherit in IE */
+legend {
+	color:#000;
+}
+
+header {
+  height: 80px;
+}
+
+.title a {
+  position: absolute;
+  font-family: Alatsi;
+  font-size: 30px;
+  font-weight: bold;
+  top: 25px;
+  left: 30px;
+  position: fixed;
+}
+
+.contents.row {
+  padding-top: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 600px;
+}
+
+.field_img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.container {
+  background-color: $white;
+  box-sizing: border-box;
+}
+
+
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  a {
+    color: $accent;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+// .user_thumbnail {
+//   height: 100px;
+//   width: 100px;
+//   .img_circle {
+//   height: 50px;
+//   width: 50px;
+//   object-fit: cover;
+//   border-radius: 50%;
+//   }
+// }
+
+// .img_field {
+//   font-size: 15px;
+//   margin-top: 10px;
+//   padding: 5px 8px;
+//   border: solid 1px #EDBC6C;
+//   color: #666;
+//   position: relative;
+//   padding: 0;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   width: 400px;
+//   height: 250px;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   background-color: #fff;
+//   overflow: hidden;
+//   box-sizing: border-box;
+//   transition: 0.3s ease-out;
+// }
+
+// .img_field i {
+//   font-size: 100px;
+//   color: #aaa;
+//   line-height: 250px;
+//   transition: 0.3s ease-out;
+// }
+
+// .img_field i.add {
+//   display: none;
+//   font-size: 50px;
+//   position: absolute;
+//   top: -90px;
+//   right: 15px;
+// }
+
+// .img_field:hover {
+//   background-color: #EDBC6C;
+//   transition: 0.3s ease-out;
+//   opacity: 0.9;
+// }
+
+// .img_field:hover i {
+//   transition: 0.3s ease-out;
+//   display: block;
+//   color: #fff;
+// }

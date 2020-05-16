@@ -1,0 +1,29 @@
+<header-top>
+  <div class="introduce">
+    <img src="https://cdn.pixabay.com/photo/2017/06/22/10/00/harley-2430193_1280.jpg" class="image__photo">
+    <h1 class="title"><a href="/">TouringNote</a></h1>
+    <h2 class="message"><p>ツーリングの楽しさを共有しませんか？</p>
+    <h3 class="scroll"><p>Scroll</p>
+    <div class="scroll_icon"><i class="fas fa-caret-down"></i></div>
+  </div>
+  <div class="inner__menu-bar">
+    <% if user_signed_in? %>
+      <div class="guest__menu">
+        <span><%= current_user.nickname %>
+          <ul class="user__info">
+            <li>
+              <%= link_to "マイページ", "/users/#{current_user.id}" %>
+              <%= link_to "ログアウト", "/users/sign_out", method: :delete %>
+            </li>
+          </ul>
+        </span>
+        <%= link_to "投稿する", "/posts/new", class: "post" %>
+      </div>
+    <% else %>
+      <div class="guest__menu">
+        <%= link_to "ログイン", "/users/sign_in", class: "guest" %>
+        <%= link_to "新規登録", "/users/sign_up", class: "guest" %>
+      </div>
+    <% end %>
+  </div>
+</header-top>
