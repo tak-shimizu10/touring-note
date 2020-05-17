@@ -1,27 +1,66 @@
-.current_user_page {
+.user_page {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 .content_post {
-  height: 600px;
   width: 100%;
   background-color: $whiteSmoke;
   padding: 20px;
   margin-bottom: 20px;
+  position: relative;
 }
 .new_image {
   height: 400px;
   background-size: cover;
   background-position: center center;
 }
+.new_tag {
+  color: gray;
+  margin-top: 10px;
+  font-size: 14px;
+}
 .new_title {
-  margin: 15px 0 10px;
-  font-size: 18px;
+  margin-bottom: 10px;
+  font-size: 20px;
   font-weight: bold;
   border-bottom: 1px solid darkGray;
-
 }
 .new_text {
-
+  margin-bottom: 18px;
+}
+.new_post_date {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.delete_btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 30px;
+  padding: 3px 8px;
+  font-size: 12px;
+  border: 2px solid red;
+  border-radius: 5px;
+  a {
+    color: red;
+  }
+}
+.new_user_name {
+  font-size: 14px;
+  font-weight: bold;
+}
+.new_user_info {
+  display: flex;
+}
+.new_user_thumbnail {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: $gray;
+  background-size: cover;
+  background-position: center center;
+}
+.new_detail_box {
+  margin-left: 15px;
 }

@@ -11,7 +11,7 @@
       <div class="top_nice__right-box">
         <div class="text_box">
           <span class="new_mark">New</span>
-          <a class="category" href="">風景</a>
+          <a class="category" href="">#風景</a>
           <div class="top_nice__user_post">
             <h2 class="top_nice__title">山口県 角島大橋</h2>
             <h3 class="top_nice__comment">角島大橋の爽快さとその絶景は何度でも来たくなります。マリンブルーの海が両サイドに広がる角島大橋は全長1780mの無料の橋です。完成当初は日本一長い無料の橋だったそうで、その走りごたえは抜群です。</h3>
@@ -24,8 +24,8 @@
             <img src="https://www.lotascard.jp/managed/wp-content/uploads/2019/05/f6c87a7852f3c991c3d618b291f74257-700x564.jpg" class="user_thumbnail">
           </a>
           <div class="detail_box">
-            <a class="post_date" href="">2020月4月6日</a>
-            <a class="top_nice__user_name" href="">TAKAFUMI SHIMIZU</a>
+            <a class="post_date" href="">2020月5月18日(月)</a>
+            <a class="top_nice__user_name" href="">Taro</a>
           </div>
         </div>
       </div>
@@ -38,23 +38,36 @@
     </div>
     <h2 class="new_arrival_content__title">- New arrival -</h2>
     <h3 class="new_arrival_content__explanation">最新の投稿</h3>
-    <div class="new_arrival_content">
+    <div class="contents row">
       <% @posts.each do |post| %>
-        <div class="post_box">
-          <a><%= post.image %></a>
-          <p><%= post.title %></p>
-        </div>
-      <% end %>
-      <% @posts.each do |post| %>
-        <div class="post_box">
-          <a><%= post.image %></a>
-          <p><%= post.title %></p>
-        </div>
-      <% end %>
-      <% @posts.each do |post| %>
-        <div class="post_box">
-          <a><%= post.image %></a>
-          <p><%= post.title %></p>
+        <div class="content_post">
+          <div class="new_image" style="background-image: url(<%= post.image %>);">
+          </div>
+          <div class="new_tag">
+            <a class="category" href="">
+              #<%= post.tag.name %>
+            </a>
+          </div>
+          <div class="new_title">
+            <%= post.title %>
+          </div>
+          <div class="new_text">
+            <%= post.text %>
+          </div>
+          <div class="new_info_box">
+            <div class="new_user_info">
+              <div class="new_user_thumbnail" style="background-image: url(<%= post.user.image %>);">
+              </div>
+              <div class="new_detail_box">
+                <p class="new_post_date"><%= l post.created_at, format: :long %></p>
+                <p class="new_user_name">
+                  <a href="/users/<%= post.user.id %>">
+                    <%= post.user.nickname %>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       <% end %>
       <%= paginate(@posts) %>
