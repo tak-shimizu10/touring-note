@@ -1,19 +1,20 @@
-<%= render 'layouts/header' %>
+<%= render 'layouts/form_header' %>
 
 <div class="contents row">
-  <p><%= @nickname %> のページ</p>
+  <p class="current_user_page">▶︎ <%= @nickname %> の投稿一覧</p>
   <% @posts.each do |post| %>
     <div class="content_post">
-      <div class="new_image_box" style="background-image: url(<%= post.image %>);">
+      <div class="new_image" style="background-image: url(<%= post.image %>);">
       </div>
-      <span class="name">
+      <div class="new_title">
         <%= post.title %>
-      </span>
-      <div class="new_text_box">
+      </div>
+      <div class="new_text">
         <%= post.text %>
       </div>
     </div>
   <% end %>
+  <%= paginate(@posts) %>
 </div>
 
 <%= render 'layouts/footer' %>
