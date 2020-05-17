@@ -1,10 +1,15 @@
 <%= render 'layouts/form_header' %>
 
 <div class="contents row">
-  <p class="current_user_page">▶︎ <%= @nickname %> の投稿一覧</p>
+  <p class="user_page">▶︎ <%= @nickname %> の投稿一覧</p>
   <% @posts.each do |post| %>
     <div class="content_post">
       <div class="new_image" style="background-image: url(<%= post.image %>);">
+      </div>
+      <div class="new_tag">
+        <a class="category" href="">
+          #<%= post.tag.name %>
+        </a>
       </div>
       <div class="new_title">
         <%= post.title %>
@@ -12,6 +17,12 @@
       <div class="new_text">
         <%= post.text %>
       </div>
+      <p class="new_post_date"><%= l post.created_at, format: :long %></p>
+      <% if user_signed_in? && current_user.id == post.user_id %>
+        <div class="delete_btn">
+          <%= link_to '削除', "/posts/#{post.id}", method: :delete, data: { confirm: '削除してもよろしいですか？'} %>
+        </div>
+      <% end %>
     </div>
   <% end %>
   <%= paginate(@posts) %>
