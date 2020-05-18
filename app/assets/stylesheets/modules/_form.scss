@@ -83,39 +83,3 @@ form {
     }
   }
 }
-
-
-// formのheader
-.form_header {
-  position: fixed;
-  .form_header__menu-bar {
-    height: 80px;
-    padding: 0 30px;
-    border-bottom: 2px solid darkGray;
-    background-color: white;
-    text-align: center;
-.title_f a {
-  font-family: Alatsi;
-  font-size: 30px;
-  font-weight: bold;
-  top: 25px;
-  left: 30px;
-  z-index: 2;
-}
-    .guest__menu {
-      font-size: 18px;
-      line-height: 80px;
-      display: flex;
-      justify-content: flex-end;
-      a {
-        color: $dark;
-        &:hover {
-          color: $accent;
-        }
-      }
-      .guest {
-        margin-left: 20px;
-      }
-    }
-  }
-}

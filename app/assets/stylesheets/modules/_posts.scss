@@ -13,17 +13,15 @@ body {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+    position: relative;
   }
-  .title a {
+  .top_visual_title {
     position: absolute;
-    // color: white;
     font-family: Alatsi;
     font-size: 30px;
     font-weight: bold;
     top: 25px;
     left: 30px;
-    // position: fixed;
-    z-index: 2;
   }
   .message p {
     position: absolute;
@@ -56,12 +54,21 @@ body {
   }
 }
 
+
 .inner__menu-bar {
   height: 80px;
   padding: 0 30px;
   border-bottom: 2px solid darkGray;
   position: relative;
   background-color: white;
+}
+.title {
+  position: absolute;
+  font-family: Alatsi;
+  font-size: 30px;
+  font-weight: bold;
+  top: 20px;
+  left: 30px;
 }
 .guest__menu {
   font-size: 18px;
