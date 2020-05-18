@@ -1,12 +1,13 @@
 <header-top>
   <div class="top_visual">
     <img src="https://cdn.pixabay.com/photo/2017/06/22/10/00/harley-2430193_1280.jpg" class="image__photo">
-    <h1 class="title"><a href="/">TouringNote</a></h1>
+    <h1 class="top_visual_title"><a href="/">TouringNote</a></h1>
     <h2 class="message"><p>ツーリングの楽しさを共有しませんか？</p>
     <h3 class="scroll"><p>Scroll</p>
     <div class="scroll_icon"><i class="fas fa-caret-down"></i></div>
   </div>
   <div class="inner__menu-bar">
+    <h1 class="title"><a href="/">TouringNote</a></h1>
     <% if user_signed_in? %>
       <div class="user_nav guest__menu">
         <span><%= current_user.nickname %>
@@ -17,7 +18,7 @@
             </li>
           </ul>
         </span>
-        <%= link_to "投稿する", "/posts/new", class: "post" %>
+        <%= link_to "投稿する", "/posts/new", class: "guest" %>
       </div>
     <% else %>
       <div class="guest__menu">

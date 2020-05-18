@@ -1,4 +1,4 @@
-<%= render 'layouts/form_header' %>
+<%= render 'layouts/header' %>
 
 <div class="contents row">
   <p class="user_page">▶︎ <%= @nickname %> の投稿一覧</p>
@@ -20,7 +20,7 @@
       <p class="new_post_date"><%= l post.created_at, format: :long %></p>
       <% if user_signed_in? && current_user.id == post.user_id %>
         <div class="delete_btn">
-          <%= link_to '削除', "/posts/#{post.id}", method: :delete, data: { confirm: '削除してもよろしいですか？'} %>
+          <%= link_to '削除', "/posts/#{post.id}", method: :delete, data: { confirm: '本当に削除してもよろしいですか？'} %>
         </div>
       <% end %>
     </div>
